@@ -4,8 +4,7 @@
 @Author: Cautious Eureka
 @Contact: Eureka@Faisen.com
 @Project: cautious_eureka
-@File: handle_log.py
-@Time: 2019-08-02 22:34
+@File: __init__.py.py
+@Time: 2019-08-03 00:18
 @Desc: Eureka
 """
-import logging
