@@ -6,18 +6,40 @@
 </head>
 <body>
 <form>
-    <label></label>
+    <label>用户名：</label>
+    <input name="username" placeholder="请输入用户名" type="text">
+    <label>密码：</label>
+    <input name="password" placeholder="请输入密码" type="text">
+    <br/>
+    <br/>
+    <label>最喜欢的电影选择：</label>
+    <table>
+        <tr>
+            <td><input name="film" type="checkbox">哈利波特1</td>
+            <td><input name="film" type="checkbox">哈利波特2</td>
+            <td><input name="film" type="checkbox">哈利波特3</td>
+        </tr>
+        <tr>
+            <td><input name="film" type="checkbox">哈利波特4</td>
+            <td><input name="film" type="checkbox">哈利波特5</td>
+            <td><input name="film" type="checkbox">哈利波特6</td>
+        </tr>
+        <tr>
+            <td><input name="film" type="checkbox">哈利波特7</td>
+            <td><input name="film" type="checkbox">哈利波特8</td>
+            <td><input name="film" type="checkbox">哈利波特9</td>
+        </tr>
+    </table>
+    <br/>
+    <input name="myfile" type="file">
 </form>
 
-2、密码
+<script>
+    username = document.getElementsByTagName("username")
+</script>
 
-3、最喜欢的电影选择
+<!--5、通过 嵌入 script 标签 在终端中打印用户名和选择的电影（下节课上完之后，再做）-->
 
-4、上传个人资料文件
-
-
-5、通过 嵌入 script 标签 在终端中打印用户名和选择的电影（下节课上完之后，再做）
-
-6、点击重置按钮，可以清空所有输入（扩展，选做）
+<!--6、点击重置按钮，可以清空所有输入（扩展，选做）-->
 </body>
 </html>
