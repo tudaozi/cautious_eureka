@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试</title>
+    <script type="text/javascript">
+        function btnAction() {
+            //dd="intent://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https%3A%2F%2Fqr.alipay.com%2Fbax05351pgjhc4yegd2y2084%3F_s%3Dwebother&_t=1474448799004#Intent;scheme=alipayqr;package=com.eg.android.AlipayGphone;end";
+            //window.location.href=dd;
+        };
+
+        function jumpOne() {
+            RHNativeJS.openAliSDK();
+            //window.location.href='http://baidu.com';
+        };i
+
+        function jumpTwo() {
+            RHNativeJS.openURlFormKepler('http://m.jd.com');
+            //window.location.href='https://ai.m.taobao.com/search.html?pid=mm_13127418_5600488_25688336&q=某某&unid=D02vdaw8ZZ003tf379k2';
+        };
+
+        function fuqinming() {
+            xxx.openJDHomeApp();
+        }
+
+        function test(str) {
+            alert("dddddd:" + str);
+            <!--var builder = new BolbBuilder();-->
+            <!--builder.append(str);-->
+            var myBlob = new Blob(str, {'type': 'text\/xml'});
+            alert("fuqinming");
+        }
+
+        //btnAction();
+        function openKepler() {
+            //打开开普勒
+            xxx.openJDHome();
+        }
+
+        //APP方式打开开普勒
+        function openJDHomeApp() {
+            xxx.openJDHomeApp();
+        }
+
+        //HTML方式打开开普勒
+        function openJDHomeWeb() {
+            xxx.openJDHomeWeb();
+        }
+
+        //打开阿里百川
+        function openAliDemo() {
+            xxx.openBaichuan();
+        };
+
+        //APP打开阿里百川
+        function openAliHomeApp() {
+            RHNativeJS.openAliHomeApp();
+        }
+
+        //HTML方式打开阿里百川
+        function openAliHomeWeb() {
+            alert("hehehe");
+            xxx.openAliHomeWeb();
+        }
+
+        //测试
+        function test() {
+            //获取 输入框的值
+            alert(document.getElementById("data").value);
+        }
+    </script>
+</head>
+<body>
+<p/>
+<p/>
+调用京东NATIVE方法模拟：<br/>
+<button onclick="openKepler()" type="submit">调起京东[判断是否安装]</button>
+<p/>
+<button onclick="openJDHomeApp()" type="submit">调起京东[APP打开方式]</button>
+<p/>
+<button onclick="openJDHomeWeb()" type="submit">调起京东[HTML打开方式]</button>
+<p/>
+<p/>
+<p/>
+调用淘宝百川NATIVE方法模拟：<br/>
+<button onclick="openAliDemo()" type="submit">调起阿里百川[是否安装]</button>
+<p/>
+<button onclick="openAliHomeApp()" type="submit"> 调起阿里百川[APP打开方式]</button>
+<p/>
+<button onclick="openAliHomeWeb()" type="submit"> 调起阿里百川[HTML打开方式]</button>
+<p/>
+<p/>
+<p/>
+测试打开淘宝触屏版中的更多button<br/>
+<button onclick="btnAction()" type="submit">调起更多button呼气协议</button>
+<p/>
+<p/>
+下面为模仿返利网_淘宝返利<p/>
+<input id="data" name="lname" type="text"/>
+<p/>
+<input onclick="test()" type="submit" value="测试"/>
+</body>
+</html>
