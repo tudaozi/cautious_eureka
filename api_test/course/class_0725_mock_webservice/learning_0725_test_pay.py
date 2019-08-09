@@ -39,6 +39,24 @@ class PaymentTest(unittest.TestCase):
         res = self.payment.pay(user_id=1001, card_num=12345, amount=500000)
         self.assertEqual("Fail", res)
 
+    def test_03_retry_success(self):
+        """
+        测试调用第三方接口超时之后，再次支付成功
+        :return:
+        """
+        self.payment.auth = mock.Mock(side_effect=[TimeoutError, 200])
+        res = self.payment.pay(user_id=1001, card_num=12345, amount=500000)
+        self.assertEqual("success", res)
+
+    def test_04_retry_ail(self):
+        """
+        测试调用第三方接口超时之后，再次支付失败
+        :return:
+        """
+        self.payment.auth = mock.Mock(side_effect=[TimeoutError, 500])
+        res = self.payment.pay(user_id=1001, card_num=12345, amount=500000)
+        self.assertEqual("Fail", res)
+
 
 if __name__ == "__main__":
     unittest.main()
